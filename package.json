@@ -1,0 +1,19 @@
+{
+  "name": "ascautomation",
+  "version": "1.0.0",
+  "description": "ASC automation test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valkeriemao/ascautomation.git"
+  },
+  "author": "Roma Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valkeriemao/ascautomation/issues"
+  },
+  "homepage": "https://github.com/valkeriemao/ascautomation#readme"
+}
