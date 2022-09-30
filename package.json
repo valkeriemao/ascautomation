@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/valkeriemao/ascautomation/issues"
   },
-  "homepage": "https://github.com/valkeriemao/ascautomation#readme"
+  "homepage": "https://github.com/valkeriemao/ascautomation#readme",
+  "devDependencies": {
+    "cypress": "^10.9.0"
+  }
 }

@@ -1,0 +1,30 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "hello@cypress.io",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "ascapplicant": 
+    {
+    "username": "asc.test.applicant@gmail.com",
+    "password": "string1234"
+    },
+  "ascevaluator": 
+    {
+    "username": "encoder1@gmail.com",
+    "password": "string1234"
+    },
+  "ascadspecialist": 
+    {
+    "username": "adspecialist1@gmail.com",
+    "password": "string1234"
+    },
+  "ascscreener": 
+    {
+    "username": "screener1@gmail.com",
+    "password": "string1234"
+    },
+  "ascreviewer": 
+    {
+    "username": "reviewer1@gmail.com",
+    "password": "string1234"
+    }
+}
