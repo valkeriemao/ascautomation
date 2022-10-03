@@ -1,5 +1,6 @@
 {
   "ascUrl": "https://asconlineapp.com/",
+  "viewport": "1400, 900",
   "ascapplicant": 
     {
     "username": "asc.test.applicant@gmail.com",
