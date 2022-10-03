@@ -1,6 +1,10 @@
 {
   "ascUrl": "https://asconlineapp.com/",
-  "viewport": "1400, 900",
+  "ascViewport": 
+    {
+      "width": 1400,
+      "height": 900
+    },
   "ascapplicant": 
     {
     "username": "asc.test.applicant@gmail.com",
@@ -25,5 +29,14 @@
     {
     "username": "reviewer1@gmail.com",
     "password": "string1234"
+    },
+  "newUser": 
+    {
+    "givenName": "gName",
+    "lastName": "lName",
+    "midName": "mName",
+    "mobile": "09091234567",
+    "email": "ascuser@yopmail.com",
+    "password": "String1234!"
     }
 }
