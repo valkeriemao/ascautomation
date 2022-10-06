@@ -1,4 +1,7 @@
 {
+  "name": "Using fixtures to represent data",
+  "email": "hello@cypress.io",
+  "body": "Fixtures are a great way to mock data for responses to routes",
   "ascUrl": "https://asconlineapp.com/",
   "ascViewport": 
     {
@@ -35,8 +38,6 @@
     "givenName": "gName",
     "lastName": "lName",
     "midName": "mName",
-    "mobile": "09091234567",
-    "email": "ascuser@yopmail.com",
     "password": "String1234!"
     }
 }

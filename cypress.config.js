@@ -8,4 +8,9 @@ module.exports = defineConfig({
     },
     //specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}"
   },
+  env: {
+    url: 'https://asconlineapp.com/'
+  },
+  viewportWidth: 1400,
+  viewportHeight: 900
 });

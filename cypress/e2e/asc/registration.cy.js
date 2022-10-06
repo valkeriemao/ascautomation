@@ -1,39 +1,92 @@
 /// <reference types ="cypress" />
 
-//const { should } = require("chai")
+import Register from '../PageObjects/registration'
 
 describe('applicant registration', () => 
 {
+    const register = new Register()
     let data
+
     beforeEach(() =>
     {
-        cy.fixture('values').then((fData) =>
+        cy.fixture('example').then((fData) =>
         {
             data = fData
         })
     }
     )
 
-    it('access registration pop-up', () =>
+    beforeEach(() => 
+    {   
+        cy.visit(Cypress.env('url'))
+    }
+    )
+
+    it('successful registration', () =>
     {
-        cy.viewport(data.ascViewport.width, data.ascViewport.height)
-        cy.visit(data.ascUrl)
-        cy.get('.register__button > .mat-button-wrapper').click()
-        cy.get('.mat-checkbox-inner-container').click()
-        cy.get(':nth-child(5) > .mat-focus-indicator > .mat-button-wrapper').click()
-        cy.get('#mat-input-2').type(data.newUser.givenName)
-        cy.get('#mat-input-4').type(data.newUser.lastName)
-        cy.get('#mat-input-3').type(data.newUser.midName)
-        cy.get('#mat-input-5').type(data.newUser.mobile)
-        cy.get('.ng-star-inserted.ng-dirty > :nth-child(2) > .mat-stepper-next > .mat-button-wrapper').click()
-        cy.get('.mat-select-placeholder').click()
-        cy.get('#mat-option-1 > .mat-option-text').click()
-        cy.get('#cdk-step-content-0-2 > form.ng-star-inserted > :nth-child(2) > .mat-stepper-next > .mat-button-wrapper').click()
-        cy.get('#mat-input-6').type(data.newUser.email)
-        cy.get('#mat-input-7').type(data.newUser.password)
-        cy.get('#mat-input-8').type(data.newUser.password)
-        // // cy.get('.ng-untouched.ng-star-inserted > :nth-child(2) > .mat-primary > .mat-button-wrapper').click()
-        // // cy.get('.user-role > .ng-tns-c33-15').should('be.equal',"APPLICANT")
+        const dateNow = Date.now()
+        register.clickRegister()
+        register.clickAccept()
+        register.clickPrivacyNext()
+        register.fillGivenName(data.newUser.givenName + dateNow)
+        register.fillMiddleName(data.newUser.midName  + dateNow)
+        register.fillLastName(data.newUser.lastName  + dateNow)
+        register.fillMobile(dateNow)
+        register.clickInfoNext()
+        register.clickCompany()
+        register.selectCompany()
+        register.clickCompanyNext()
+        register.fillEmail(dateNow + '@yopmail.com')
+        register.fillPassword(data.newUser.password)
+        register.fillConfirmPassword(data.newUser.password)
+        // register.clickConfirmRegister()
+        // cy.get('.user-role > .ng-tns-c33-15').should('be.equal',"APPLICANT")
+    }
+    )
+
+    it('failed registration due to existing email', () =>
+    {
+        const dateNow = Date.now()
+        register.clickRegister()
+        register.clickAccept()
+        register.clickPrivacyNext()
+        register.fillGivenName(data.newUser.givenName + dateNow)
+        register.fillMiddleName(data.newUser.midName  + dateNow)
+        register.fillLastName(data.newUser.lastName  + dateNow)
+        register.fillMobile(dateNow)
+        register.clickInfoNext()
+        register.clickCompany()
+        register.selectCompany()
+        register.clickCompanyNext()
+        register.fillEmail('alvingjohndrich@gmail.com')
+        register.fillPassword(data.newUser.password)
+        register.fillConfirmPassword(data.newUser.password)
+        // register.clickConfirmRegister()
+        // cy.get('.user-role > .ng-tns-c33-15').should('be.equal',"APPLICANT")
+    }
+    )
+
+    it('reset registration form', () =>
+    {
+        const dateNow = Date.now()
+        register.clickRegister()
+        register.clickAccept()
+        register.clickPrivacyNext()
+        register.fillGivenName(data.newUser.givenName + dateNow)
+        register.fillMiddleName(data.newUser.midName  + dateNow)
+        register.fillLastName(data.newUser.lastName  + dateNow)
+        register.fillMobile(dateNow)
+        register.clickInfoNext()
+        register.clickCompany()
+        register.selectCompany()
+        register.clickCompanyNext()
+        register.fillEmail(dateNow + '@yopmail.com')
+        register.fillPassword(data.newUser.password)
+        register.fillConfirmPassword(data.newUser.password)
+        register.clickReset()
+        cy.get('.ng-star-inserted > h4').contains(' Terms and Agreements ')
+        cy.get('.mat-checkbox-inner-container').should('not.be.checked')
+
     }
     )
 }
