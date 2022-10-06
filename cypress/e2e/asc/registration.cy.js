@@ -9,7 +9,7 @@ describe('applicant registration', () =>
 
     beforeEach(() =>
     {
-        cy.fixture('example').then((fData) =>
+        cy.fixture('values').then((fData) =>
         {
             data = fData
         })

@@ -1,12 +1,9 @@
 {
-  "name": "Using fixtures to represent data",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes",
   "ascUrl": "https://asconlineapp.com/",
   "ascViewport": 
     {
-      "width": 1400,
-      "height": 900
+      "desktopWidth": 1400,
+      "desktopHeight": 900
     },
   "ascapplicant": 
     {
