@@ -17,6 +17,11 @@ class Login {
         cy.get('.mat-primary > .mat-button-wrapper').click()
     }
 
+    checkUserModule(value)
+    {
+        cy.get('.user-role > .ng-tns-c33-3').should('contain',value)
+    }
+
 }
 export default Login
 
