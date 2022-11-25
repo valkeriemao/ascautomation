@@ -6,9 +6,9 @@
   "scripts": {
     "type": "module",
     "test": "./node_modules/.bin/cypress run --config pageLoadTimeout=60000",
-    "cy:run": "npm run test"
+    "cy:run": "npx run test"
   },
-  "repository": { 
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/valkeriemao/ascautomation.git"
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/valkeriemao/ascautomation#readme",
   "devDependencies": {
-    "cypress": "^10.9.0"
+    "cypress": "^11.2.0",
+    "cypress-xpath": "^2.0.1"
   }
 }

@@ -7,28 +7,48 @@
     },
   "ascapplicant": 
     {
-    "username": "asc.test.applicant@gmail.com",
-    "password": "string1234"
+    "username": "ryan23montemayor@gmail.com",
+    "password": "password"
     },
   "ascevaluator": 
     {
-    "username": "encoder1@gmail.com",
-    "password": "string1234"
+    "username": "evaltr@gmail.com",
+    "password": "password123"
     },
   "ascadspecialist": 
     {
-    "username": "adspecialist1@gmail.com",
-    "password": "string1234"
+    "username": "adspe@gmail.com",
+    "password": "password123"
     },
   "ascscreener": 
     {
-    "username": "screener1@gmail.com",
-    "password": "string1234"
+    "username": "scrner@gmail.com",
+    "password": "password123"
     },
   "ascreviewer": 
     {
-    "username": "reviewer1@gmail.com",
-    "password": "string1234"
+    "username": "revwer@gmail.com",
+    "password": "password123"
+    },
+    "ascadmin": 
+    {
+    "username": "super@gmail.com",
+    "password": "password123"
+    },
+    "ascaccounting": 
+    {
+    "username": "accounting@gmail.com",
+    "password": "password123"
+    },
+    "unknownuser": 
+    {
+    "username": "unknownuser@gmail.com",
+    "password": "password123"
+    },
+    "unverifieduser": 
+    {
+    "username": "unverifieduser@gmail.com",
+    "password": "password"
     },
   "newUser": 
     {

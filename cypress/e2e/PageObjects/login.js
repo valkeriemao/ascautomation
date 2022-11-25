@@ -4,22 +4,28 @@ class Login {
 
     fillUsername(value)
     {
-        cy.get('#username').type(value)
+        cy.get('[aria-label="Email Address"]').type(value)
     }
 
     fillPassword(value)
     {
-        cy.get('#password').type(value)
+        cy.get('[aria-label="Password"]').type(value)
     }
 
     clickLogin() 
     {
-        cy.get('.mat-primary > .mat-button-wrapper').click()
+        // cy.get('.q-mt-lg > :nth-child(1) > .q-btn > .q-btn__content').click()
+        cy.xpath('//span[text()[contains(.,"Login")]]').click()
     }
 
     checkUserModule(value)
     {
-        cy.get('.user-role > .ng-tns-c33-3').should('contain',value)
+        cy.get('.q-ma-none').should('contain',value)
+    }
+
+    checkDialogMsg(value)
+    {
+        cy.get('.q-dialog__message').should('contain',value)
     }
 
 }

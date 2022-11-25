@@ -5,7 +5,7 @@ class Register {
 
     clickRegister() 
     {
-        cy.get('.register__button > .mat-button-wrapper').click()
+        cy.get('//span[text()[contains(.,"Register")]]').click()
     }
 
     clickAccept() 
