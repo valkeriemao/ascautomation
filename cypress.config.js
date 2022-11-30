@@ -14,5 +14,7 @@ module.exports = defineConfig({
     url: 'http://18.140.158.179:1313/'
   },
   viewportWidth: 1400,  
-  viewportHeight: 900
+  viewportHeight: 900,
+  //remove this if CORS issue is no longer replicated
+  chromeWebSecurity: false
 });

@@ -9,8 +9,25 @@
 // ***********************************************
 //
 //
+import Login from "../e2e/PageObjects/login"
+
+const login = new Login();
+
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('successfulLogin', (username, password, module) => {
+    login.fillUsername(username)
+    login.fillPassword(password)
+    login.clickLogin()
+    login.checkUserModule(module)
+})
+
+Cypress.Commands.add('unsuccessfulLogin', (username, password, message) => {
+    login.fillUsername(username)
+    login.fillPassword(password)
+    login.clickLogin()
+    login.checkDialogMsg(message)
+})
 //
 //
 // -- This is a child command --

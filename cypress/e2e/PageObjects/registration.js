@@ -5,42 +5,37 @@ class Register {
 
     clickRegister() 
     {
-        cy.get('//span[text()[contains(.,"Register")]]').click()
+        cy.xpath('//span[text()[contains(.,"Register")]]').click()
     }
 
     clickAccept() 
     {
-        cy.get('.mat-checkbox-inner-container').click()
+        cy.get('#agree').click()
     }
 
-    clickPrivacyNext()
+    clickNext()
     {
-        cy.get(':nth-child(5) > .mat-focus-indicator > .mat-button-wrapper').click()
+        cy.xpath('//span[text()[contains(.,"Next")]]').click()
     }
 
     fillGivenName(value) 
     {
-        cy.get('#mat-input-2').type(value)
+        cy.get('[aria-label="Given Name *"]').type(value)
     }
 
     fillMiddleName(value) 
     {
-        cy.get('#mat-input-3').type(value)
+        cy.get('[aria-label="Middle Name"]').type(value)
     }
 
     fillLastName(value) 
     {
-        cy.get('#mat-input-4').type(value)
+        cy.get('[aria-label="Last Name *"]').type(value)
     }
 
     fillMobile(value) 
     {
-        cy.get('#mat-input-5').type(value)
-    }
-
-    clickInfoNext()
-    {
-        cy.get('.ng-star-inserted.ng-dirty > :nth-child(2) > .mat-stepper-next > .mat-button-wrapper').click()
+        cy.get('[aria-label="Mobile Number *"]').type(value)
     }
 
     clickCompany()
