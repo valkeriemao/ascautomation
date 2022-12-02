@@ -1,0 +1,29 @@
+pipeline {
+
+    agent any
+
+    parameters{
+        string(name: 'SPEC', defaultValue: "cypress/e2e/**/**", description: "Enter the script path to be executed.")
+        choice(choice: 'BROWSER', choices: ['chrome','firefox'], description: "Select the browser for execution.")
+    }
+
+    options{
+        ansiColor('xterm')
+    }
+
+    stages{
+        stage('Testing'){
+            steps{
+                bat "npm install cypress"
+                bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+            }
+        }
+    }
+
+    post{
+        always{
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', 
+            reportName: 'HTML Report', reportTitles: ''])                
+        }
+    }
+}
