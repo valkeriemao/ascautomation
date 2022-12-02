@@ -28,6 +28,26 @@ Cypress.Commands.add('unsuccessfulLogin', (username, password, message) => {
     login.clickLogin()
     login.checkDialogMsg(message)
 })
+
+Cypress.Commands.add('registration', (givenName, midName, lastName, password) => {
+    const dateNow = Date.now()
+    register.clickRegister()
+    register.clickAccept()
+    register.clickNext()
+    register.fillGivenName(givenName + dateNow)
+    register.fillMiddleName(midName  + dateNow)
+    register.fillLastName(lastName  + dateNow)
+    register.fillMobile(dateNow)
+    register.clickInfoNext()
+    register.clickCompany()
+    register.selectCompany()
+    register.clickCompanyNext()
+    register.fillEmail(dateNow + '@yopmail.com')
+    register.fillPassword(password)
+    register.fillConfirmPassword(password)
+    // register.clickConfirmRegister()
+    // cy.get('.user-role > .ng-tns-c33-15').should('be.equal',"APPLICANT")
+})
 //
 //
 // -- This is a child command --
