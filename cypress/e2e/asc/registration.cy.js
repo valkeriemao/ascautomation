@@ -1,5 +1,5 @@
 /// <reference types ="cypress" />
-
+//this is a test comment
 import Register from '../PageObjects/registration'
 
 describe('applicant registration', () => 
