@@ -3,7 +3,8 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
 // export default defineConfig({
-  projectId: '9xwcu1',  
+  projectId: '9xwcu1',
+  recordKey: '1fb4f94b-a291-434c-a5cd-76a534f147ca',
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -16,5 +17,5 @@ module.exports = defineConfig({
   viewportWidth: 1400,  
   viewportHeight: 900,
   //remove this if CORS issue is no longer replicated
-  chromeWebSecurity: false
+  chromeWebSecurity: false,
 });

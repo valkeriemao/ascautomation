@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "type": "module",
-    "test": "./node_modules/.bin/cypress run --config pageLoadTimeout=60000",
-    "cy:run": "npx run test"
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:spec": "cypress run --spec 'cypress/e2e/asc/login.cy.js'",
+    "cy:record": "cypress run --spec 'cypress/e2e/asc/login.cy.js' --record --key 1fb4f94b-a291-434c-a5cd-76a534f147ca"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   },
   "homepage": "https://github.com/valkeriemao/ascautomation#readme",
   "devDependencies": {
-    "cypress": "^11.2.0",
+    "cypress": "^12.0.1",
     "cypress-xpath": "^2.0.1"
   }
 }
