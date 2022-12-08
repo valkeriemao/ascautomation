@@ -46,7 +46,7 @@ Cypress.Commands.add('registration', (givenName, midName, lastName, password) =>
     register.fillPassword(password)
     register.fillConfirmPassword(password)
     // register.clickConfirmRegister()
-    // cy.get('.user-role > .ng-tns-c33-15').should('be.equal',"APPLICANT")
+    // login.checkDialogMsg('Applicant')
 })
 //
 //
